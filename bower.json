@@ -3,6 +3,8 @@
   "dependencies": {
     "ember": "~2.10.0",
     "ember-cli-shims": "0.1.3",
-    "semantic-ui": "^2.2.7"
+    "semantic-ui": "^2.2.7",
+    "blob-polyfill": "^1.0.20150320",
+    "fabric.js": "fabric#^1.7.3"
   }
 }

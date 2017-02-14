@@ -17,6 +17,7 @@ export default ApplicationSerializer.extend({
     for (var i=0; i < payload.length; i++) {  
       payload[i].thumb_url = payload[i].urls.thumb;
       payload[i].regular_url = payload[i].urls.regular;
+      payload[i].postcard_id = 1;
     }
     return this._super(store, primaryModelClass, payload, id, requestType);
   },
@@ -24,6 +25,8 @@ export default ApplicationSerializer.extend({
   normalizeSingleResponse: function(store, primaryModelClass, payload, id, requestType) {
     payload.thumb_url = payload.urls.thumb;
     payload.regular_url = payload.urls.regular;
+    payload.postcard_id = 1;
+
     return this._super(store, primaryModelClass, payload, id, requestType);
  }
 });

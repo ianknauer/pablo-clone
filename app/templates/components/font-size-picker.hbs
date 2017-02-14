@@ -1,0 +1,10 @@
+{{#if (eq size 32)}}
+  <img class="weight-picker" src="/images/lrg-font-size.png" {{action on-change 16}}/>
+
+{{else if (eq size 24)}}
+  <img class="weight-picker" src="/images/med-font-size.png"  {{action on-change 32}}/>
+
+{{else}}
+  <img class="weight-picker" src="/images/small-font-size.png" {{action on-change 24}}/>
+
+{{/if}}

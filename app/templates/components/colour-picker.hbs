@@ -1,0 +1,59 @@
+<div class="{{name}}-picker Colour Square" style="background-color: {{currentColour}}">
+</div>
+
+{{#if (eq name 'header')}}
+  {{#if isShowingPopup}}
+    {{#tether-dialog
+      target=".header-picker"
+      close="toggleModal"
+      container-class="Popup"
+      targetAttachment="bottom middle"
+      attachment="top right"
+    }}
+      {{#each colours as |colour|}}
+        <div class="Bar" style="background-color: {{colour}};"
+          {{action on-change colour}}>
+        </div>
+      {{/each}}
+      
+    {{/tether-dialog}}
+  {{/if}}
+{{/if}}
+
+{{#if (eq name 'body')}}
+  {{#if isShowingPopup}}
+    {{#tether-dialog
+      target=".body-picker"
+      close="toggleModal"
+      container-class="Popup"
+      targetAttachment="bottom middle"
+      attachment="top right"
+    }}
+      {{#each colours as |colour|}}
+        <div class="Bar" style="background-color: {{colour}};"
+          {{action on-change colour}}>
+        </div>
+      {{/each}}
+      
+    {{/tether-dialog}}
+  {{/if}}
+{{/if}}
+
+{{#if (eq name 'caption')}}
+  {{#if isShowingPopup}}
+    {{#tether-dialog
+      target=".caption-picker"
+      close="toggleModal"
+      container-class="Popup"
+      targetAttachment="bottom middle"
+      attachment="top right"
+    }}
+      {{#each colours as |colour|}}
+        <div class="Bar" style="background-color: {{colour}};"
+          {{action on-change colour}}>
+        </div>
+      {{/each}}
+      
+    {{/tether-dialog}}
+  {{/if}}
+{{/if}}

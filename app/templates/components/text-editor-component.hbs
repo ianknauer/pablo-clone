@@ -1,0 +1,47 @@
+<div class="editor">
+  <div id="{{model.name}}-editor" class="ui inverted menu" style="position: absolute; left: 2000px; top: 240px; display: none;">
+    {{#ui-dropdown class="ui selection inverted-dropdown" selected=model.font onChange=(action (mut model.font)) as |execute mapper|}}
+      <div class="default text">default Font</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each fonts as |font|}}
+          <div class="item {{font}}" data-value="{{map-value mapper font}}">
+            <p class="font">
+              {{font}}
+            </p>
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}
+    <a class="item">
+      {{weight-picker
+        weight=model.weight
+        on-change=(action (mut model.weight))}}
+    </a>
+    <a class="item">
+      {{italic-picker
+        italicize=model.italicize
+        on-change=(action (mut model.italicize))}}
+    </a>
+    <a class="item">
+      {{font-size-picker
+        size=model.size
+        on-change=(action (mut model.size))
+      }}
+    </a>
+    <a class="item">
+      {{text-alignment-component
+        alignment=model.alignment
+        on-change=(action (mut model.alignment))
+      }}
+    </a>
+    <div class="item">
+      {{colour-picker
+        currentColour=model.colour
+        on-change=(action (mut model.colour))
+        name=model.name
+      }}
+    </div>
+    
+  </div>
+</div>

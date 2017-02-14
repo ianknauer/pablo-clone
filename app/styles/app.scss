@@ -1,0 +1,234 @@
+.rail {
+  margin-top: 20px!important;
+}
+
+.divider {
+  margin-top: 25px!important;
+  margin-bottom: 25px!important;
+}
+
+.search {
+  margin-bottom: 25px;
+}
+
+.preview {
+  margin-bottom: 15px;
+}
+
+.image-bank :last-child {
+  margin-bottom: 0px;
+}
+
+.selected {
+  border: 2px solid #6435C9;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.image-bank {
+  height: 650px;
+  overflow: scroll;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+  margin-bottom: 30px;
+}
+
+.pin {
+  width: 26px!important;
+  height: 45px!important;
+}
+
+.pinterest {
+  margin-left: -5px!important;
+}
+
+.inst {
+  width: 45px;
+  height: 45px;
+}
+
+.face {
+  width: 76px;
+  height: 45px;
+}
+
+.face, .pin, .inst {
+  background-color: #f8f8f8!important;
+  margin-left: 5px!important; 
+  margin-right: 5px!important;
+}
+
+.right.rail {
+    width: calc( 220px + 1em )!important;
+}
+
+.ui.secondary.menu .item { 
+  margin: 0px!important;
+}
+
+.downwards {
+  font-size: 1em!important;
+  margin-top: -5px!important;
+}
+
+.header-title {
+  padding-top: 20px!important;
+  padding-bottom: 20px!important;
+}
+
+.text-button {
+  width: 46px;
+  height: 46px;
+  margin-left: 7px!important;
+  margin-right: 7px!important;
+  padding: 1px!important;
+}
+
+.text-style {
+  font-size: 10px;
+  top: 8px;
+  position: relative;
+}
+
+.main-body {
+  width: 484px;
+  height: 725px;
+}
+
+.main-container {
+  width: 520px!important;
+}
+
+img.preview {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.postcard {
+  border-radius: 6px;
+}
+
+.ui.selection.active.dropdown, .ui.selection.active.dropdown:hover, .ui.selection.active.dropdown , .ui.selection.active.dropdown .menu:hover, .ui.selection.active.dropdown .menu {
+  border-color: #6435C9!important;
+}
+
+.Merriweather {
+  font-family: Merriweather;
+}
+
+.Roboto {
+  font-family: Roboto;
+}
+
+.Square {
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.Popup {
+  background-color: #1B1C1D;
+  border-radius: 3px;
+  padding: 5px;
+  margin-top:12px;
+  margin-left: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.Bar {
+  height: 20px;
+  width: 100px;
+  margin: 5px 10px;
+}
+
+.inverted-dropdown {
+  background-color: #1B1C1D!important;
+  color: rgba(255, 255, 255, 0.9)!important;
+  border-color: rgba(255, 255, 255, 0.08)!important;
+}
+
+.ui.selection.visible.dropdown > .text:not(.default) {
+  color: rgba(255, 255, 255, 0.9)!important;
+}
+
+.ui.selection.inverted-dropdown.active.dropdown, .ui.selection.inverted-dropdown.active.dropdown:hover, .ui.selection.inverted-dropdown.active.dropdown, .ui.selection.inverted-dropdown.active.dropdown .menu:hover, .ui.selection.inverted-dropdown.active.dropdown .menu {
+  border-color: rgba(255, 255, 255, 0.08)!important;
+  background-color: #1B1C1D!important;
+  color: rgba(255, 255, 255, 0.9)!important;
+}
+
+.font {
+  color: rgba(255, 255, 255, 0.9)!important;
+}
+
+.ui.selection.dropdown.inverted-dropdown .menu > .item {
+  border-top: 1px solid rgba(255, 255, 255, 0.08)!important;
+}
+
+.ui.dropdown.inverted-dropdown .menu {
+  background: #1B1C1D!important;
+}
+
+.icon.active {
+  color: #fff;
+}
+
+.weight-picker {
+  opacity: 0.7!important;
+}
+
+.text-elements {
+  display: inline-block;
+  position: relative;
+}
+
+.ui.corner.label:after {
+  top: 0.05em;
+  right: 0.6em;
+  border-right: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+  border-right-color: inherit;
+}
+
+.ui.corner.label.sizing:after {
+  top: 0.05em;
+  right: 0em;
+  border-right: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+  border-right-color: inherit;
+}
+.ui.corner.label .icon {
+  cursor: default;
+  position: relative;
+  top: 0.2em;
+  left: -0.5em;
+  font-size: 1em;
+  margin: 0em;
+}
+
+.ui.corner.label.sizing .icon {
+  cursor: default;
+  position: relative;
+  top: 0.2em;
+  left: 0.1em;
+  font-size: 1em;
+  margin: 0em;
+}
+
+.ui.corner.label {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.text-elements {
+  min-height: 70px;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.full-screen {
+  min-height: 900px;
+}
