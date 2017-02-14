@@ -1,0 +1,7 @@
+{{#if (eq alignment "left")}}
+  <i class="align left icon" {{action on-change "center"}}></i>
+{{else if (eq alignment "center")}}
+  <i class="align center icon" {{action on-change "right"}}></i>
+{{else}}
+<i class="align right icon" {{action on-change "left"}}></i>
+{{/if}}

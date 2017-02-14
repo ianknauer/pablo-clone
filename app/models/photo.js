@@ -5,5 +5,6 @@ export default DS.Model.extend({
   height: DS.attr(),
   likes: DS.attr(),
   thumbUrl: DS.attr('string'),
-  regularUrl: DS.attr('string')
+  regularUrl: DS.attr('string'),
+  postcard: DS.belongsTo(),
 });

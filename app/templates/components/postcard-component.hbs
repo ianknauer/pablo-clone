@@ -1,0 +1,84 @@
+<div class="ui right close rail">
+  <div class="ui segment">
+    <h5 class="ui left floated sub header">
+      SIZES
+    </h5>
+    <div class="ui divider"></div>
+    <div class="social-sizes">
+      {{size-selection-component
+        selection=model.postcard.sizing
+        on-change=(action (mut model.postcard.sizing))
+      }}
+    </div>
+  </div>
+  
+  <!-- --> 
+  
+  <div class="ui segment">
+    <h5 class="ui left floated sub header">
+      FILTERS
+    </h5>
+    <h5 class="ui right floated sub header select" {{action 'clearFilters'}}>
+      <i class="small refresh icon"></i>RESET
+    </h5>
+    <div class="ui divider"></div>
+    {{#ui-dropdown class="ui selection" selected=model.postcard.filter onChange=(action (mut model.postcard.filter)) as |execute mapper|}}
+      <div class="default text">No Filter</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each filters as |filter|}}
+          <div class="item" data-value="{{map-value mapper filter}}">
+            <img class="ui large circular image" src="https://static.buffer.com/images/pablo/filters-example-light-contrast.jpg" />
+            {{filter}}
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}
+  
+  </div>
+  
+  <div class="ui segment">
+    <h5 class="ui left floated sub header">
+      TEXT
+    </h5>
+    <div class="ui divider"></div>
+    <div class="social-sizes">
+      {{text-selection-component
+        selection=model.header.visible
+        on-change=(action (mut model.header.visible))
+        name=model.header.name
+      }}
+      {{text-selection-component
+        selection=model.body.visible
+        on-change=(action (mut model.body.visible))
+        name=model.body.name
+      }}
+      {{text-selection-component
+        selection=model.caption.visible
+        on-change=(action (mut model.caption.visible))
+        name=model.caption.name
+      }}
+    </div>
+    <div class="ui divider" style="margin-bottom: 0px!important;"></div>
+    
+  </div>
+  <button class="fluid ui violet button" {{action 'downloadImage'}}>Download</button>
+</div>
+<div class="ui basic clearing segment">
+<h5 class="ui left floated sub header">
+  CANVAS
+</h5>
+{{!-- <h5 class="ui right floated sub header">
+  <i class="huge move icon"></i> REPOSITION
+</h5> --}}
+</div>
+  <canvas id="image-layer" class="postcard"></canvas>
+  <div class="ui inverted dimmer {{if loading '' 'active'}}">
+    <div class="ui loader"></div>
+</div>
+
+{{text-editor-component model=model.header}}
+{{text-editor-component model=model.body}}
+{{text-editor-component model=model.caption}}
+
+

@@ -1,0 +1,25 @@
+<button class="ui icon basic grey button pin text-elements" {{action on-change 'pinterest'}}>
+  {{#if (eq selection 'pinterest')}}
+  <a class="ui violet right corner label sizing">
+    <i class="check icon"></i>
+  </a>
+  {{/if}}
+  <i class="pinterest icon"></i>
+</button>
+<button class="ui icon basic grey button inst text-elements" {{action on-change 'instagram'}}>
+  {{#if (eq selection 'instagram')}}
+  <a class="ui violet right corner label sizing">
+    <i class="check icon"></i>
+  </a>
+  {{/if}}
+  <i class="instagram icon"></i>
+</button>
+<button class="ui icon basic grey button face text-elements" {{action on-change 'facebook'}}>
+  {{#if (eq selection 'facebook')}}
+  <a class="ui violet right corner label sizing">
+    <i class="check icon"></i>
+  </a>
+  {{/if}}
+  <i class="facebook icon"></i>
+  <i class="twitter icon"></i>
+</button>

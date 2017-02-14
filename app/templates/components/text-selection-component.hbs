@@ -1,0 +1,30 @@
+{{#if (eq selection 'true')}}
+<a class="ui violet right corner label">
+  <i class="check icon"></i>
+</a>
+  <button class="ui icon basic grey button text-button" {{action on-change 'false'}}>
+    {{#if (eq name 'header')}}
+      <img src="/images/text-header-icon.png" width="40" />
+      <span class="text-style">Header</span>
+    {{else if (eq name 'body')}}
+    <img src="/images/text-body-icon.png" width="40" />
+    <span class="text-style">Body</span>
+    {{else}}
+    <img src="/images/text-caption-icon.png" width="40" />
+    <span class="text-style">Caption</span>
+    {{/if}}
+  </button>
+{{else}}
+<button class="ui icon basic grey button text-button" {{action on-change 'true'}}>
+  {{#if (eq name 'header')}}
+    <img src="/images/text-header-icon.png" width="40" />
+    <span class="text-style">Header</span>
+  {{else if (eq name 'body')}}
+  <img src="/images/text-body-icon.png" width="40" />
+  <span class="text-style">Body</span>
+  {{else}}
+  <img src="/images/text-caption-icon.png" width="40" />
+  <span class="text-style">Caption</span>
+  {{/if}}
+</button>
+{{/if}}

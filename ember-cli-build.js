@@ -6,6 +6,10 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
+  
+  app.import('bower_components/fabric.js/dist/fabric.js');
+  app.import('bower_components/caman/dist/caman.full.js');
+  app.import('vendor/fabric.canvasex.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
