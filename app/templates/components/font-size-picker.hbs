@@ -1,3 +1,6 @@
+{{!-- The if statements control of the images to show, and which of the values to pass back up to the on-change action.
+      This allows me to cycle the text between 16, 24, and 32.
+--}}
 {{#if (eq size 32)}}
   <img class="weight-picker" src="/images/lrg-font-size.png" {{action on-change 16}}/>
 

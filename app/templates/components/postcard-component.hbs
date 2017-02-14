@@ -5,6 +5,7 @@
     </h5>
     <div class="ui divider"></div>
     <div class="social-sizes">
+      {{!-- This is the component that allows you to choose between the pinterest/instagram/facebook/twitter sizing --}}
       {{size-selection-component
         selection=model.postcard.sizing
         on-change=(action (mut model.postcard.sizing))
@@ -22,6 +23,7 @@
       <i class="small refresh icon"></i>RESET
     </h5>
     <div class="ui divider"></div>
+    {{!-- This maps the filters that defined in the component javascript and maps the selected one to the postcard.filter attribute --}}
     {{#ui-dropdown class="ui selection" selected=model.postcard.filter onChange=(action (mut model.postcard.filter)) as |execute mapper|}}
       <div class="default text">No Filter</div>
       <i class="dropdown icon"></i>
@@ -43,6 +45,7 @@
     </h5>
     <div class="ui divider"></div>
     <div class="social-sizes">
+      {{!-- This is where you turn on/off the different text elements. --}}
       {{text-selection-component
         selection=model.header.visible
         on-change=(action (mut model.header.visible))
@@ -68,14 +71,15 @@
 <h5 class="ui left floated sub header">
   CANVAS
 </h5>
-{{!-- <h5 class="ui right floated sub header">
-  <i class="huge move icon"></i> REPOSITION
-</h5> --}}
 </div>
   <canvas id="image-layer" class="postcard"></canvas>
+  {{!-- The overlays a spinner on the postcard area while i'm running javascript in the background.--}}
   <div class="ui inverted dimmer {{if loading '' 'active'}}">
     <div class="ui loader"></div>
 </div>
+
+{{!-- I use a different text editor for each of the different text types. This could probably be refactored to a single component, as I feel that I should have been 
+      able to add the editor to whatever the active text was. --}}
 
 {{text-editor-component model=model.header}}
 {{text-editor-component model=model.body}}

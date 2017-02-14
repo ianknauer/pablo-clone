@@ -1,5 +1,8 @@
 import DS from 'ember-data';
 
+//I broke the different elements on the canvas down to individual models to allow for easier definition.
+//Caption and Header both include the same fields but have different default values.
+
 export default DS.Model.extend({
   name: DS.attr('string', {defaultValue: 'body'}),
   top: DS.attr('number', {defaultValue: 100 }),

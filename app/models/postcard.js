@@ -1,5 +1,7 @@
 import DS from 'ember-data';
 
+//This is the model that brings in the fields i needed to create the postcard element, as well as providing defaults for most of the fields.
+
 export default DS.Model.extend({
   width: DS.attr(),
   height: DS.attr(),

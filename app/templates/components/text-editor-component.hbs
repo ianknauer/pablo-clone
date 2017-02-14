@@ -1,3 +1,10 @@
+{{!-- This is the entire editing bar that is able to be used for each of the different text fields. 
+      - The model in this case is the model as passed in from the outside (The body, caption or footer).
+      - The first component (line 5) is the text drop down (from semantic-ui) that takes the font of the object and maps it 
+        to the value of the selection. Thoices (fonts) are declared in the text-editor-component javascript file.
+      - The weight picker, italic picker, font-size-picker, text-alignment-component and colour-picker all map(through the 
+        mutable model.parameter) their parameter to the selection in their individual components
+--}}
 <div class="editor">
   <div id="{{model.name}}-editor" class="ui inverted menu" style="position: absolute; left: 2000px; top: 240px; display: none;">
     {{#ui-dropdown class="ui selection inverted-dropdown" selected=model.font onChange=(action (mut model.font)) as |execute mapper|}}

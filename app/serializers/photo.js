@@ -12,6 +12,8 @@ export default ApplicationSerializer.extend({
   },
   
   // normalizeArray and normalizeSingle are both used to pull the urls out of their nesting and bring them into the main object. 
+  // Ember Data uses the JSONApi Spec, which is pretty specific on how things should be set up. It didn't like the default nesting 
+  // for how unsplash returned the content. 
 
   normalizeArrayResponse: function(store, primaryModelClass, payload, id, requestType) {
     for (var i=0; i < payload.length; i++) {  

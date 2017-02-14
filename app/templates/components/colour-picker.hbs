@@ -1,6 +1,9 @@
 <div class="{{name}}-picker Colour Square" style="background-color: {{currentColour}}">
 </div>
-
+{{!-- I wasn't able to pass in the name variable to the #tether dialog component so i had to have three different if statements 
+      in here to allow me to use the same component for the header/caption/body. The tether dialog component (which is a 3rd party plugin)
+      is adding a modal on to the div above this text when you click on the component. When you click on the colour bar the action (actions by default in Ember are clicks)
+      passes the colour back up to the on-change attribute set when I intially instantiated the component.--}}
 {{#if (eq name 'header')}}
   {{#if isShowingPopup}}
     {{#tether-dialog
@@ -12,7 +15,7 @@
     }}
       {{#each colours as |colour|}}
         <div class="Bar" style="background-color: {{colour}};"
-          {{action on-change colour}}>
+          {{action on-change colour}}>  
         </div>
       {{/each}}
       
